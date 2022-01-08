@@ -25,8 +25,8 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 
-//connect to database config.MONGODB_URI //mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-mongoose.connect('mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+//connect to database 
+mongoose.connect(config.MONGODB_URI,{
  useNewUrlParser: true,
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'))

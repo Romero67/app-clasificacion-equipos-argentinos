@@ -2,10 +2,9 @@ const Agenda = require('agenda');
 const { getTeams } = require('./futbolargentino.com/main');
 const config = require('./config');
 
-//mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-//config.DATABASE_AGENDA
 
-const agenda = new Agenda({ db: { address: 'mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' } });
+
+const agenda = new Agenda({ db: { address: config.DATABASE_AGENDA } });
 
 agenda.define('sendGetTeams', function(job) {
  getTeams();
